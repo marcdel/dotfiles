@@ -10,6 +10,7 @@ ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
 ln -s "$PWD/gitignore" "$HOME/.gitignore"
 ln -s "$PWD/rspec" "$HOME/.rspec"
 
+git clone git@github.com:tpope/vim-pathogen.git "$Home/.vim/bundle/vim-pathogen"
 git clone git@git.wincent.com:command-t.git "$HOME/.vim/bundle/commant-t"
 git clone git@github.com:altercation/vim-colors-solarized.git "$HOME/.vim/bundle/vim-colors-solarized"
 git clone git@github.com:tpope/vim-commentary.git "$HOME/.vim/bundle/vim-commanetary"
