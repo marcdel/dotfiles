@@ -21,11 +21,11 @@ alias heroku='nocorrect heroku'
 
 # Aliases
 alias be='bundle exec'
-alias git=hub
 alias vi=vim
 
 # recommended by brew doctor
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
 
 eval "$(rbenv init -)"
+eval "$(hub alias -s)"
 # DO NOT EDIT BELOW THIS LINE
