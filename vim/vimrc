@@ -1,14 +1,22 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+" Vundle prereqs
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+filetype plugin indent on
+filetype off
+Bundle 'gmarik/vundle'
+
+" Plugin bundles
+Bundle 'altercation/vim-colors-solarized'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
 
 syntax enable
 set background=dark
 colorscheme solarized
 
-set nocompatible                " choose no compatibility with legacy vi
+set nocompatible                " no compatibility with legacy vi
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
 
 " Whitespace
 set nowrap                      " don't wrap lines
