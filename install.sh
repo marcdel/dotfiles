@@ -16,3 +16,9 @@ ln -s "$PWD/rspec" "$HOME/.rspec"
 #cd "$Home/.vim/bundle/"
 #git clone git@github.com:gmarik/vundle.git
 #vim +BundleInstall +qall
+
+#cd "$HOME/.vim/bundle/Command-T/ruby/command-t"
+#RBENV_VERSION=1.8.7-p299
+#rbenv local system
+#export ARCHFLAGS="-arch i386"
+#rake make

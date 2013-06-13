@@ -1,14 +1,28 @@
-" Vundle prereqs
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-filetype plugin indent on
-filetype off
-Bundle 'gmarik/vundle'
+" Setting up Vundle
+    let installVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle..."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone git@github.com:gmarik/vundle.git ~/.vim/bundle/vundle
+        let installVundle=0
+    endif
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    Bundle 'gmarik/vundle'
 
-" Plugin bundles
-Bundle 'altercation/vim-colors-solarized'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+    " User bundles
+    Bundle 'altercation/vim-colors-solarized'
+    Bundle 'wincent/Command-T'
+
+    if installVundle == 0
+        echo "Installing Bundles..."
+        echo ""
+        :BundleInstall
+    endif
+" Setting up Vundle
+
 
 syntax enable
 set background=dark
