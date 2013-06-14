@@ -13,10 +13,6 @@ ln -s "$PWD/rspec" "$HOME/.rspec"
 # Something about cloning the git repo or cloning and failing causes
 # a weird infinite loop of symlinks between dotfiles/vim and ~/.vim
 
-#cd "$Home/.vim/bundle/"
-#git clone git@github.com:gmarik/vundle.git
-#vim +BundleInstall +qall
-
 #cd "$HOME/.vim/bundle/Command-T/ruby/command-t"
 #RBENV_VERSION=1.8.7-p299
 #rbenv local system
