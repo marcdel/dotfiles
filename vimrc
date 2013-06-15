@@ -12,9 +12,17 @@
     call vundle#rc()
     Bundle 'gmarik/vundle'
 
-    " User bundles
+    " General bundles
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'wincent/Command-T'
+    Bundle 'tpope/vim-fugitive'
+
+    " Ruby bundles
+    Bundle 'vim-ruby/vim-ruby'
+    " Bundle 'ecomba/vim-ruby-refactoring'
+    " Bundle 'tpope/vim-endwise'
+    " Bundle 'tpope/vim-rake'
+    " Bundle 'tpope/vim-rails'
 
     if installVundle == 0
         echo "Installing Bundles..."
@@ -31,6 +39,7 @@ colorscheme solarized
 set nocompatible                " no compatibility with legacy vi
 set encoding=utf-8
 set showcmd                     " display incomplete commands
+set number
 
 " Whitespace
 set nowrap                      " don't wrap lines
