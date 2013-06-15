@@ -39,7 +39,7 @@ colorscheme solarized
 set nocompatible                " no compatibility with legacy vi
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-set number
+set number                      " show line numbers
 
 " Whitespace
 set nowrap                      " don't wrap lines
