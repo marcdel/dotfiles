@@ -11,25 +11,24 @@ if !filereadable(vundle_readme)
   echo ""
   silent !mkdir -p ~/.vim/bundle
   silent !git clone git@github.com:gmarik/vundle.git ~/.vim/bundle/vundle
-  let installVundle=0
-  endif
-  set rtp+=~/.vim/bundle/vundle/
+endif
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 
 " General bundles
 Bundle 'altercation/vim-colors-solarized'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'ervandew/supertab'
-" Bundle 'tpope/vim-commentary'
-" Bundle 'tpope/vim-surround'
-" Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 
 " Ruby bundles
 " Bundle 'vim-ruby/vim-ruby'
 " Bundle 'thoughtbot/vim-rspec'
-" Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'ecomba/vim-ruby-refactoring'
 " Bundle 'vim-scripts/ruby-matchit'
 " Bundle 'tpope/vim-endwise'
 " Bundle 'tpope/vim-rake'
@@ -44,7 +43,6 @@ colorscheme solarized
 set nocompatible 
 set encoding=utf-8
 set showcmd                        " information about the current command
-set number                         " show line numbers
 set relativenumber                 " line numbers based on cursor position
 
 " Whitespace
@@ -77,9 +75,6 @@ let maplocalleader = '\\'
 " Rspec
 let g:rspec_command = "!rspec --drb {spec}"
 
-" toggle line numbers with ,n
-nnoremap <leader>n :setlocal number!<cr>
-
 " Toggle NERDTree with ,d
 nnoremap <leader>d :NERDTreeToggle<cr>
 
@@ -92,15 +87,15 @@ map <leader>l :call RunLastSpec()<cr>
 inoremap <Tab> <C-P>
 
 " ruby-refactoring bindings
-:nnoremap <leader>rap  :RAddParameter<cr>
-:nnoremap <leader>rcpc :RConvertPostConditional<cr>
-:nnoremap <leader>rel  :RExtractLet<cr>
-:vnoremap <leader>rec  :RExtractConstant<cr>
-:vnoremap <leader>relv :RExtractLocalVariable<cr>
-:nnoremap <leader>rit  :RInlineTemp<cr>
-:vnoremap <leader>rrlv :RRenameLocalVariable<cr>
-:vnoremap <leader>rriv :RRenameInstanceVariable<cr>
-:vnoremap <leader>rem  :RExtractMethod<cr>
+nnoremap <leader>rap  :RAddParameter<cr>
+nnoremap <leader>rcpc :RConvertPostConditional<cr>
+nnoremap <leader>rel  :RExtractLet<cr>
+vnoremap <leader>rec  :RExtractConstant<cr>
+vnoremap <leader>relv :RExtractLocalVariable<cr>
+nnoremap <leader>rit  :RInlineTemp<cr>
+vnoremap <leader>rrlv :RRenameLocalVariable<cr>
+vnoremap <leader>rriv :RRenameInstanceVariable<cr>
+vnoremap <leader>rem  :RExtractMethod<cr>
 
 " Disable arrow keys in normal(n), insert(i), and visual(v) modes
 nnoremap <up> <nop>
