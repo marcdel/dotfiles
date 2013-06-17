@@ -40,14 +40,14 @@ filetype plugin on
 set background=dark
 colorscheme solarized
 
-set nocompatible                   " what the fuck is vi?
+set nocompatible 
 set visualbell
 set encoding=utf-8
 set showcmd                        " information about the current command
 set ruler                          " show current line / column in status bar
 set number                         " show line numbers
 set relativenumber                 " line numbers based on cursor position
-set backupdir=~/.tmp
+set backupdir=~/.tmp               " these two don't work for some reason...
 set directory=~/.tmp               " keep swap files out of the working directory
 
 " Whitespace
