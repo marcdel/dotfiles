@@ -16,24 +16,24 @@ if !filereadable(vundle_readme)
   set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
 
 " General bundles
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'wincent/Command-T'
-Bundle 'tpope/vim-fugitive'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'ervandew/supertab'
+" Bundle 'tpope/vim-commentary'
+" Bundle 'tpope/vim-surround'
+" Bundle 'tpope/vim-repeat'
 
 " Ruby bundles
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'vim-scripts/ruby-matchit'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-rails'
+" Bundle 'vim-ruby/vim-ruby'
+" Bundle 'thoughtbot/vim-rspec'
+" Bundle 'ecomba/vim-ruby-refactoring'
+" Bundle 'vim-scripts/ruby-matchit'
+" Bundle 'tpope/vim-endwise'
+" Bundle 'tpope/vim-rake'
+" Bundle 'tpope/vim-rails'
 
 syntax enable
 filetype plugin on
