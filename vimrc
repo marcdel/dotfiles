@@ -37,6 +37,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 syntax enable
 filetype plugin on
+filetype indent on
 set background=dark
 colorscheme solarized
 
@@ -61,6 +62,10 @@ set smartcase                      " ... unless they contain at least one capita
 " Autocomplete
 set complete=.,b,u,]               " searches in current file, buffers, and tags
 set wildmode=longest,list:longest  "shell style autocomplete
+
+" Indentation
+set smartindent
+set autoindent
 
 " Numbers
 set nrformats=                     " treat all numbers as decimal (numbers with leading zeros normally treated as octal, etc)
