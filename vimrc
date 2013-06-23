@@ -30,13 +30,12 @@ Bundle 'tpope/vim-repeat'
 " Bundle 'thoughtbot/vim-rspec'
 Bundle 'ecomba/vim-ruby-refactoring'
 " Bundle 'vim-scripts/ruby-matchit'
-" Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-endwise'
 " Bundle 'tpope/vim-rake'
 " Bundle 'tpope/vim-rails'
 
 syntax enable
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set background=dark
 colorscheme solarized
 

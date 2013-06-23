@@ -6,6 +6,8 @@ rm -r "$HOME/.gvimrc"
 rm -r "$HOME/.zsh"
 rm -r "$HOME/.zshrc"
 
+rm -r "$HOME/.tmux.conf"
+
 rm -r "$HOME/.gitconfig"
 rm -r "$HOME/.gitignore"
 rm -r "$HOME/.rspec"
