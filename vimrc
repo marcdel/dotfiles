@@ -24,6 +24,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'scrooloose/nerdtree'
 
 " Ruby bundles
 " Bundle 'vim-ruby/vim-ruby'
@@ -74,7 +75,9 @@ let maplocalleader = '\\'
 " Rspec
 let g:rspec_command = "!rspec --drb {spec}"
 
-" Toggle NERDTree with ,d
+" NERDTree
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q 
 nnoremap <leader>d :NERDTreeToggle<cr>
 
 " Rspec.vim mappings
