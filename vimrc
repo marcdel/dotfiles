@@ -72,6 +72,9 @@ set nrformats=                     " treat all numbers as decimal (numbers with 
 let mapleader = ','
 let maplocalleader = '\\'
 
+" Custom Mappings
+nnoremap <leader><leader> <c-^>
+
 " Rspec
 let g:rspec_command = "!rspec --drb {spec}"
 
@@ -99,18 +102,8 @@ vnoremap <leader>rrlv :RRenameLocalVariable<cr>
 vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 vnoremap <leader>rem  :RExtractMethod<cr>
 
-" Disable arrow keys in normal(n), insert(i), and visual(v) modes
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop> 
-
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop> 
-
-vnoremap <up> <nop>
-vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
+" Dont press these ok
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
+map <down> <nop>
