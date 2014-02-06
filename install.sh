@@ -10,6 +10,7 @@ ln -s "$PWD/tmux.conf" "$HOME/.tmux.conf"
 
 ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
 ln -s "$PWD/gitignore" "$HOME/.gitignore"
+ln -s "$PWD/gitignore_global" "$HOME/.gitignore_global"
 ln -s "$PWD/rspec" "$HOME/.rspec"
 
 # Something about cloning the git repo or cloning and failing causes
@@ -20,3 +21,6 @@ ln -s "$PWD/rspec" "$HOME/.rspec"
 #rbenv local system
 #export ARCHFLAGS="-arch i386"
 #rake make
+
+# Setup git global ignore
+# git config --global core.excludesfiles ~/.gitignore_global

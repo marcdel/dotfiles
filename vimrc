@@ -38,7 +38,12 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
+Bundle 'jgdavey/tslime.vim'
 
+" -----------------------------
+" Rust bundles
+" -----------------------------
+Bundle 'wting/rust.vim'
 
 " -----------------------------
 " Basic settings
@@ -87,7 +92,7 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " -----------------------------
 let g:rspec_command = "!rspec --drb {spec}"
 map <leader>r :call RunCurrentSpecFile()<cr>
-map <leader>s :call RunNearestSpec()<cr>
+" map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 
 " Dont press these ok
