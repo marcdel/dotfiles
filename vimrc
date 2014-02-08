@@ -53,6 +53,12 @@ filetype plugin indent on
 set background=dark
 colorscheme solarized
 
+" Set backup and swap directories.
+" The double // makes it add the full path to filename
+set backup
+set backupdir=~/.tmp//
+set dir=~/.tmp//
+
 " -----------------------------
 " Set Options
 " -----------------------------
