@@ -13,9 +13,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " -----------------------------
-" Command fucking T
+" Control fucking P
 " -----------------------------
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 
 " -----------------------------
 " General bundles
@@ -26,24 +26,13 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'scrooloose/nerdtree'
 
 " -----------------------------
 " Ruby bundles
 " -----------------------------
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-rails'
-Bundle 'jgdavey/tslime.vim'
-
-" -----------------------------
-" Rust bundles
-" -----------------------------
-Bundle 'wting/rust.vim'
 
 " -----------------------------
 " Basic settings
@@ -62,7 +51,7 @@ set dir=~/.tmp//
 " -----------------------------
 " Set Options
 " -----------------------------
-set nocompatible 
+set nocompatible
 set encoding=utf-8
 set showcmd                        " information about the current command
 set relativenumber                 " line numbers based on cursor position
@@ -90,16 +79,8 @@ let maplocalleader = '\\'
 " Custom Mappings
 " -----------------------------
 inoremap <Tab> <C-P>
-nnoremap <leader><leader> <c-^>
-nnoremap <leader>d :NERDTreeToggle<cr>
-
-" -----------------------------
-" Rspec.vim
-" -----------------------------
-let g:rspec_command = "!rspec --drb {spec}"
-map <leader>r :call RunCurrentSpecFile()<cr>
-" map <leader>s :call RunNearestSpec()<cr>
-map <leader>l :call RunLastSpec()<cr>
+nnoremap <leader><leader> <c-^>   " I don't remember what this is. Probably something to do with tmux.
+nnoremap <leader>t :CtrlP<cr>
 
 " Dont press these ok
 noremap <left> <nop>
