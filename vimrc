@@ -82,6 +82,11 @@ inoremap <Tab> <C-P>
 nnoremap <leader><leader> <c-^>   " I don't remember what this is. Probably something to do with tmux.
 nnoremap <leader>t :CtrlP<cr>
 
+" Save with ctrl s
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv           " Reselect previous selection after save
+imap <c-s> <Esc><c-s>             " Save and go back to insert mode
+
 " Dont press these ok
 noremap <left> <nop>
 noremap <right> <nop>
