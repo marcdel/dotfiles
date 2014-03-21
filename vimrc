@@ -21,11 +21,17 @@ Bundle 'kien/ctrlp.vim'
 " General bundles
 " -----------------------------
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+
+" -----------------------------
+" TDD bundles
+" -----------------------------
+Bundle 'benmills/vimux'
+Bundle 'skalnik/vim-vroom'
 
 " -----------------------------
 " Ruby bundles
@@ -69,6 +75,9 @@ set smartindent                    " auto-indent on new line
 set autoindent                     " copy indent from current line on new line
 set nrformats=                     " treat all numbers as decimal (numbers with leading zeros normally treated as octal, etc)
 
+let g:vroom_use_vimux = 1
+let g:VimuxHeight = "30"
+
 " -----------------------------
 " Leader
 " -----------------------------
@@ -86,6 +95,9 @@ nnoremap <leader>t :CtrlP<cr>
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv           " Reselect previous selection after save
 imap <c-s> <Esc><c-s>             " Save and go back to insert mode
+
+" Send highlighted text to the lower window
+vmap <C-c><C-c> "ry :call VimuxRunCommand(@r)<CR>
 
 " Dont press these ok
 noremap <left> <nop>

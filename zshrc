@@ -15,7 +15,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Disable all auto-correct
-#unsetopt correct
+unsetopt correct_all
 
 # Disable individual auto-corrections
 alias heroku='nocorrect heroku'
