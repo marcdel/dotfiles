@@ -1,52 +1,10 @@
-" -----------------------------
-" Install Vundle
-" -----------------------------
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-  echo "Installing Vundle..."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone git@github.com:gmarik/vundle.git ~/.vim/bundle/vundle
-endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-" -----------------------------
-" Control fucking P
-" -----------------------------
-Bundle 'kien/ctrlp.vim'
-
-" -----------------------------
-" General bundles
-" -----------------------------
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-
-" -----------------------------
-" TDD bundles
-" -----------------------------
-Bundle 'benmills/vimux'
-Bundle 'skalnik/vim-vroom'
-
-" -----------------------------
-" Ruby bundles
-" -----------------------------
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'tpope/vim-endwise'
+execute pathogen#infect()
 
 " -----------------------------
 " Basic settings
 " -----------------------------
-syntax enable
+syntax on
 filetype plugin indent on
-set background=dark
-colorscheme solarized
 
 " Set backup and swap directories.
 " The double // makes it add the full path to filename
@@ -74,37 +32,18 @@ set wildmode=longest,list:longest  " shell style autocomplete
 set smartindent                    " auto-indent on new line
 set autoindent                     " copy indent from current line on new line
 set nrformats=                     " treat all numbers as decimal (numbers with leading zeros normally treated as octal, etc)
+set laststatus=2                   " always show the status line
+set hidden                         " allow modified buffers to be hidden
+set wildignore=*.o,*.obj,.git,node_modules/**,**/node_modules/**,_build/**,deps/**
 
-let g:vroom_use_vimux = 1
-let g:VimuxHeight = "30"
+let mapleader = ","
+let g:ctrlp_map = "<leader>p"
 
-" -----------------------------
-" Leader
-" -----------------------------
-let mapleader = ','
-let maplocalleader = '\\'
+map <C-n> :NERDTreeToggle<CR>
 
-" -----------------------------
-" Custom Mappings
-" -----------------------------
-inoremap <Tab> <C-P>
-nnoremap <leader><leader> <c-^>   " I don't remember what this is. Probably something to do with tmux.
-nnoremap <leader>t :CtrlP<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
 
-" Save with ctrl s
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv           " Reselect previous selection after save
-imap <c-s> <Esc><c-s>             " Save and go back to insert mode
-
-" Send highlighted text to the lower window
-vmap <C-c><C-c> "ry :call VimuxRunCommand(@r)<CR>
-
-" Dont press these ok
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <up> <nop>
-noremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
