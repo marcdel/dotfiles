@@ -40,7 +40,11 @@ set background=dark
 colorscheme solarized
 
 let mapleader = ","
+
 let g:ctrlp_map = "<leader>p"
+if executable('rg')
+  let g:ctrlp_user_command = 'rg --files  %s'
+endif
 
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
