@@ -64,6 +64,7 @@ alias zshconfig="vim ~/.zshrc"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs'
 alias ctags="`brew --prefix`/bin/ctags"
 
 export NVM_DIR="/Users/marc/.nvm"
