@@ -58,7 +58,12 @@ nmap <leader>bs :CtrlPMRU<cr>
 
 nmap <leader>bt :!ctags -R .<cr>
 
+" assumes alchemist.vim installed
+nmap <leader>mt :!Mix test<cr>
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:syntastic_elixir_checkers = ['syntastic-checkers-elixir']
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files

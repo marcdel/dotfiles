@@ -27,10 +27,6 @@ plugins=(git)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -60,11 +56,11 @@ export EVENT_NOKQUEUE=1
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias edit="atom-beta"
 alias zshconfig="vim ~/.zshrc"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias emacs='/usr/local/Cellar/emacs/25.1/bin/emacs'
 alias ctags="`brew --prefix`/bin/ctags"
 
 export NVM_DIR="/Users/marc/.nvm"
@@ -72,3 +68,8 @@ export NVM_DIR="/Users/marc/.nvm"
 
 # added by travis gem
 [ -f /Users/marc/.travis/travis.sh ] && source /Users/marc/.travis/travis.sh
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
