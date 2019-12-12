@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
-let g:netrw_dirhist_7='/Users/marc/Code/marcdel/ci_metrics/lib/ci_metrics_web/controllers'
-let g:netrw_dirhist_6='/Users/marc/Code/marcdel/ci_metrics/lib/ci_metrics_web'
-let g:netrw_dirhist_5='/Users/marc/Code/marcdel/ci_metrics/lib'
-let g:netrw_dirhist_4='/Users/marc/Code/marcdel/ci_metrics/lib/ci_metrics/metrics'
-let g:netrw_dirhist_3='/Users/marc/Code/marcdel/ci_metrics/lib/ci_metrics'
-let g:netrw_dirhist_2='/Users/marc/Code/marcdel/ci_metrics/lib'
-let g:netrw_dirhist_1='/Users/marc/Code/marcdel/ci_metrics'
