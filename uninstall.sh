@@ -2,6 +2,7 @@
 rm -r "$HOME/.vim"
 rm -r "$HOME/.vimrc"
 rm -r "$HOME/.vimrc.packages"
+rm -r "$HOME/.config"
 
 rm -r "$HOME/.zshrc"
 
