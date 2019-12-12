@@ -1,0 +1,14 @@
+"Always load vim-projectionist projections for Elixir
+"This is probably not what I want, but I don't want to
+"have to copy this json to every project folder.
+function! s:setProjections()
+  let l:json = readfile($HOME."/.config/nvim/elixir-projections.json")
+  let l:dict = projectionist#json_parse(l:json)
+  call projectionist#append(getcwd(), l:dict)
+endfunction
+
+augroup elixir
+  autocmd!
+  autocmd User ProjectionistDetect :call s:setProjections()
+augroup end
+
