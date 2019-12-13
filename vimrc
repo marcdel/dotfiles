@@ -16,7 +16,7 @@ nmap <leader>1 :NERDTreeToggle<CR>
 let test#strategy = "neovim"
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
-nmap <leader>ts :TestSuite<CR>
+nmap <leader>ta :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 nmap <leader>tv :TestVisit<CR>
 
