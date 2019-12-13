@@ -2,6 +2,7 @@ let mapleader = " "
 
 set cursorline
 set title
+set number
 
 " Save everytime text is changed
 autocmd TextChanged,TextChangedI,InsertLeave <buffer> silent update
