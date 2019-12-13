@@ -12,6 +12,15 @@ nmap <leader>ev :tabe ~/.vimrc<cr>
 nmap <leader>sv :source ~/.vimrc<cr>
 nmap <leader>1 :NERDTreeToggle<CR>
 
+" vim-test config
+let test#strategy = "neovim"
+nmap <leader>tn :TestNearest<CR>
+nmap <leader>tf :TestFile<CR>
+nmap <leader>ts :TestSuite<CR>
+nmap <leader>tl :TestLast<CR>
+nmap <leader>tv :TestVisit<CR>
+
+" CtrlP config
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
