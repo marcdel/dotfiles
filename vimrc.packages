@@ -5,8 +5,13 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-call minpac#add('neoclide/coc.nvim')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-projectionist')
-call minpac#add('tpope/vim-endwise')
-call minpac#add('elixir-editors/vim-elixir')
+call minpac#add('tpope/vim-sensible') 		" 'Sensible' default settings
+call minpac#add('tpope/vim-sleuth') 		" Change tab settings depending on file type
+call minpac#add('tpope/vim-surround') 		" Add/delete/change surrounding characters like quotes, brackets and tags
+call minpac#add('tpope/vim-repeat') 		" Allow plugins and other things to repeat with dot
+call minpac#add('tpope/vim-projectionist') 	" Jump to associated files like tests/views/etc similar to Rails.vim
+call minpac#add('tpope/vim-endwise') 		" Auto add `end` when typing `def do`, etc.
+call minpac#add('scrooloose/nerdtree') 		" Tree view file explorer
+call minpac#add('kien/ctrlp.vim') 		" Fuzzy file search
+call minpac#add('neoclide/coc.nvim') 		" Language server based autocomplete
+call minpac#add('elixir-editors/vim-elixir') 	" Syntax highlighting, etc for Elixir
