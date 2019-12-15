@@ -1,5 +1,5 @@
 "Install language servers:
-":CocInstall coc-tsserver coc-json coc-html coc-css coc-elixir
+":CocInstall coc-tsserver coc-json coc-html coc-css coc-elixir coc-rls
 
 " if hidden is not set, TextEdit might fail.
 set hidden

@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+mcd(){ mkdir "$1" && cd "$1" ; }
 
 export PATH="/Users/marc/.rbenv/shims:${PATH}"
 export RBENV_SHELL=zsh
