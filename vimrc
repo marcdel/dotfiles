@@ -4,6 +4,10 @@ set cursorline
 set title
 set number
 
+set background=light
+colorscheme solarized8
+set termguicolors
+
 " Save everytime text is changed
 autocmd TextChanged,TextChangedI,InsertLeave <buffer> silent update
 

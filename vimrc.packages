@@ -5,6 +5,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
+call minpac#add('lifepillar/vim-solarized8')    " Solarized theme
 call minpac#add('tpope/vim-sensible') 		" 'Sensible' default settings
 call minpac#add('tpope/vim-sleuth') 		" Change tab settings depending on file type
 call minpac#add('tpope/vim-surround') 		" Add/delete/change surrounding characters like quotes, brackets and tags
