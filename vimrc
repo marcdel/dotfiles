@@ -11,9 +11,22 @@ autocmd TextChanged,TextChangedI,InsertLeave <buffer> silent update
 nmap <leader>ev :tabe ~/.vimrc<cr>
 nmap <leader>sv :source ~/.vimrc<cr>
 nmap <leader>1 :NERDTreeToggle<CR>
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+if has('nvim')
+  " Use escape to exit insert mode in terminal buffer
+  tmap <ESC> <C-\><C-n>
+endif
+
+" neoterm config
+let g:neoterm_default_mod = 'belowright'
+" let g:neoterm_size=16
+let g:neoterm_autoscroll = 1
+let g:test#preserve_screen = 0
 
 " vim-test config
 let test#strategy = "neovim"
+" let test#strategy = "neoterm"
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>ta :TestSuite<CR>
