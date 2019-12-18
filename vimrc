@@ -1,26 +1,38 @@
 let mapleader = " "
 
-set cursorline
-set title
-set number
+set cursorline          " Highlight current line
+set cursorcolumn        " Highlight current column (this might be too much 😬)
+set title               " Set iTerm window title to current filename
+set number              " Line numbers
+set autoread            " Update files changed outside of vim if they haven't been edited
+set mouse=a             " Scroll like a normal window in nvim
 
 " Save everytime text is changed
-autocmd TextChanged,TextChangedI,InsertLeave <buffer> silent update
+autocmd TextChanged,TextChangedI,InsertLeave <buffer> update
 
 " Keybindings
-nmap <leader>ev :tabe ~/.vimrc<cr>
-nmap <leader>sv :source ~/.vimrc<cr>
+nmap <leader>ev :tabe ~/.vimrc<CR>
+nmap <leader>sv :source $MYVIMRC<CR>
 nmap <leader>1 :NERDTreeToggle<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
+nmap <leader><Space> :bp<cr>
 if has('nvim')
   " Use escape to exit insert mode in terminal buffer
   tmap <ESC> <C-\><C-n>
 endif
 
+" Elixir specific bindings
+autocmd Filetype elixir nmap <leader>f :!mix format<CR>
+autocmd Filetype elixir nmap <leader>r :T mix test<CR>
+
+" Rust specific bindings
+autocmd Filetype rust nmap <leader>f :!cargo fmt<CR>
+autocmd Filetype rust nmap <leader>r :T cargo run<CR>
+
 " neoterm config
 let g:neoterm_default_mod = 'belowright'
-" let g:neoterm_size=16
+let g:neoterm_size=16
 let g:neoterm_autoscroll = 1
 let g:test#preserve_screen = 0
 
