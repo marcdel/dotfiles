@@ -12,6 +12,7 @@ call minpac#add('tpope/vim-surround') 		" Add/delete/change surrounding characte
 call minpac#add('tpope/vim-repeat') 		" Allow plugins and other things to repeat with dot
 call minpac#add('tpope/vim-commentary')         " Comment based on text objects
 call minpac#add('tpope/vim-projectionist') 	" Jump to associated files like tests/views/etc similar to Rails.vim
+call minpac#add('tpope/vim-fugitive') 	        " Git in vim
 call minpac#add('scrooloose/nerdtree') 		" Tree view file explorer
 call minpac#add('kien/ctrlp.vim') 		" Fuzzy file search
 call minpac#add('kassio/neoterm') 	        " Nice bindings for neovim's terminal buffers
