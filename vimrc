@@ -49,7 +49,7 @@ nmap <leader>tv :TestVisit<CR>
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 1
+let g:ctrlp_use_caching = 0
 
 " Typing is hard
 command! Q q

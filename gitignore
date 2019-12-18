@@ -8,6 +8,7 @@
 .idea
 .project
 *.iml
+.elixir_ls
 
 # Secrets
 .env
