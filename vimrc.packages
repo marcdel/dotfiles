@@ -1,3 +1,6 @@
+" Run this in command mode to install the first time
+" :call coc#util#install()
+
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
