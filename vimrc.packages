@@ -15,6 +15,7 @@ call minpac#add('tpope/vim-projectionist') 	" Jump to associated files like test
 call minpac#add('tpope/vim-fugitive') 	        " Git in vim
 call minpac#add('scrooloose/nerdtree') 		" Tree view file explorer
 call minpac#add('kien/ctrlp.vim') 		" Fuzzy file search
+call minpac#add('rking/ag.vim') 		" Search with ag
 call minpac#add('kassio/neoterm') 	        " Nice bindings for neovim's terminal buffers
 call minpac#add('janko/vim-test') 		" Run tests for different languages
 call minpac#add('neoclide/coc.nvim') 		" Language server based autocomplete
