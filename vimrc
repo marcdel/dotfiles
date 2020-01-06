@@ -7,6 +7,14 @@ set number              " Line numbers
 set autoread            " Update files changed outside of vim if they haven't been edited
 set mouse=a             " Scroll like a normal window in nvim
 
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set cursorline
+    autocmd WinEnter * set cursorcolumn
+    autocmd WinLeave * set nocursorline
+    autocmd WinLeave * set nocursorcolumn
+augroup END
+
 " Save everytime text is changed
 autocmd TextChanged,TextChangedI,InsertLeave <buffer> update
 

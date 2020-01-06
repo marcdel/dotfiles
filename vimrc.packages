@@ -23,3 +23,4 @@ call minpac#add('kassio/neoterm') 	        " Nice bindings for neovim's terminal
 call minpac#add('janko/vim-test') 		" Run tests for different languages
 call minpac#add('neoclide/coc.nvim') 		" Language server based autocomplete
 call minpac#add('elixir-editors/vim-elixir') 	" Syntax highlighting, etc for Elixir
+call minpac#add('slashmili/alchemist.vim') 	" More syntax highlighting, etc for Elixir
