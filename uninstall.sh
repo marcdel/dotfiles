@@ -10,5 +10,7 @@ rm -r "$HOME/.config/nvim/elixir-projections.json"
 
 rm -r "$HOME/.zshrc"
 
+rm -r "$HOME/.iex.exs"
+
 rm -r "$HOME/.gitconfig"
 rm -r "$HOME/.gitignore"

@@ -12,7 +12,7 @@ autocmd TextChanged,TextChangedI,InsertLeave <buffer> update
 
 " Keybindings
 nmap <leader>ev :tabe ~/.vimrc<CR>
-nmap <leader>sv :source $MYVIMRC<CR>
+nmap <leader>sv :source ~/.vimrc<CR>
 nmap <leader>1 :NERDTreeToggle<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>

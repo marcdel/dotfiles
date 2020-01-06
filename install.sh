@@ -10,5 +10,7 @@ ln -s "$PWD/config/nvim/elixir-projections.json" "$HOME/.config/nvim/elixir-proj
 
 ln -s "$PWD/zshrc" "$HOME/.zshrc"
 
+ln -s "$PWD/iex.exs" "$HOME/.iex.exs"
+
 ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
 ln -s "$PWD/gitignore" "$HOME/.gitignore"
