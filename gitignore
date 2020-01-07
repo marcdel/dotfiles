@@ -9,6 +9,7 @@
 .project
 *.iml
 .elixir_ls
+.vim_session
 
 # Secrets
 .env

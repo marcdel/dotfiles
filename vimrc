@@ -1,7 +1,5 @@
 let mapleader = " "
 
-set cursorline          " Highlight current line
-set cursorcolumn        " Highlight current column (this might be too much 😬)
 set title               " Set iTerm window title to current filename
 set number              " Line numbers
 set autoread            " Update files changed outside of vim if they haven't been edited
@@ -9,8 +7,8 @@ set mouse=a             " Scroll like a normal window in nvim
 
 augroup BgHighlight
     autocmd!
-    autocmd WinEnter * set cursorline
-    autocmd WinEnter * set cursorcolumn
+    autocmd WinEnter * set cursorline           " Highlight current line
+    autocmd WinEnter * set cursorcolumn         " Highlight current column (this might be too much 😬)
     autocmd WinLeave * set nocursorline
     autocmd WinLeave * set nocursorcolumn
 augroup END
@@ -29,6 +27,13 @@ if has('nvim')
   " Use escape to exit insert mode in terminal buffer
   tmap <ESC> <C-\><C-n>
 endif
+
+" Puts a .vim-session file in your current working directory
+" This file should be in my ~/.gitignore to ignore it globally
+nmap <leader>ms :mksession <C-R>=getcwd()<CR>/.vim_session<CR>
+nmap <leader>ss :source <C-R>=getcwd()<CR>/.vim_session<CR>
+" nmap <leader>cs :mksession ~/.config/nvim/default-session.vim<CR>
+" nmap <leader>ss :source ~/.config/nvim/default-session.vim<CR>
 
 " Elixir specific bindings
 autocmd Filetype elixir nmap <leader>f :!mix format<CR>
