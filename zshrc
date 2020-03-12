@@ -102,6 +102,9 @@ export EDITOR="$VISUAL"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 mcd(){ mkdir "$1" && cd "$1" ; }
 
+# Enable history in IEX through Erlang(OTP)
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 export PATH="/Users/marc/.rbenv/shims:${PATH}"
 export RBENV_SHELL=zsh
 source '/usr/local/Cellar/rbenv/1.1.2/libexec/../completions/rbenv.zsh'
