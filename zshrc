@@ -101,6 +101,7 @@ export EDITOR="$VISUAL"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 mcd(){ mkdir "$1" && cd "$1" ; }
+alias cat='bat'
 
 # Enable history in IEX through Erlang(OTP)
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -125,3 +126,5 @@ rbenv() {
 }
 
 . /usr/local/opt/asdf/asdf.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
