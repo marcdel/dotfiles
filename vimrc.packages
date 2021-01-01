@@ -1,26 +1,22 @@
 " Run this in command mode to install the first time
-" :call coc#util#install()
+" :CocInstall coc-elixir
 
-packadd minpac
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+call plug#begin()
 
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
+Plug 'elixir-editors/vim-elixir'					" Syntax highlighting, etc for Elixir
+Plug 'neoclide/coc.nvim', {'branch': 'release'}				" Language server based autocomplete
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' 						" Fuzzy file search
+Plug 'tpope/vim-commentary'         					" Comment based on text objects
+Plug 'airblade/vim-gitgutter'						" Show changed lines in the left gutter
+Plug 'altercation/vim-colors-solarized'					" Solarized theme
+Plug 'janko/vim-test'							" Run tests for different languages
+Plug 'tpope/vim-dispatch' 						" Properly populate the quickfix window for makegreen
+Plug 'tpope/vim-projectionist' 						" Jump to associated files like tests/views/etc similar to Rails.vim
+Plug 'c-brenn/fuzzy-projectionist.vim'
+Plug 'andyl/vim-projectionist-elixir'
 
-call minpac#add('lifepillar/vim-solarized8')    " Solarized theme
-call minpac#add('tpope/vim-sensible') 		" 'Sensible' default settings
-call minpac#add('tpope/vim-sleuth') 		" Change tab settings depending on file type
-call minpac#add('tpope/vim-surround') 		" Add/delete/change surrounding characters like quotes, brackets and tags
-call minpac#add('tpope/vim-repeat') 		" Allow plugins and other things to repeat with dot
-call minpac#add('tpope/vim-commentary')         " Comment based on text objects
-call minpac#add('tpope/vim-projectionist') 	" Jump to associated files like tests/views/etc similar to Rails.vim
-call minpac#add('tpope/vim-fugitive') 	        " Git in vim
-call minpac#add('scrooloose/nerdtree') 		" Tree view file explorer
-call minpac#add('kien/ctrlp.vim') 		" Fuzzy file search
-call minpac#add('rking/ag.vim') 		" Search with ag
-call minpac#add('kassio/neoterm') 	        " Nice bindings for neovim's terminal buffers
-call minpac#add('janko/vim-test') 		" Run tests for different languages
-call minpac#add('neoclide/coc.nvim') 		" Language server based autocomplete
-call minpac#add('elixir-editors/vim-elixir') 	" Syntax highlighting, etc for Elixir
-call minpac#add('slashmili/alchemist.vim') 	" More syntax highlighting, etc for Elixir
+call plug#end()
+
+colorscheme solarized
