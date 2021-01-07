@@ -9,6 +9,7 @@ set foldmethod=syntax
 set nofoldenable
 set splitright 				" Open new splits to the right
 set splitbelow 				" and below
+set hidden 				" Allow modified buffers to be hidden (argdo is v useless otherwise)
 
 " Theme
 set background=dark
@@ -38,6 +39,7 @@ autocmd Filetype elixir nmap <leader>r :Dispatch! mix test<CR>
 
 " vim-test config
 let test#strategy = "dispatch"
+let g:dispatch_quickfix_height=15
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>ta :TestSuite<CR>
