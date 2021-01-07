@@ -54,11 +54,19 @@ nmap <leader>o :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>k :BTags<CR>
 nmap <leader>g :GFiles?<CR>
-nmap <Leader>/ :Ag<CR>
-" Search for the word under the cursor
-nmap <Leader>? :Ag <C-R><C-W><CR>
-" Search for the highlighted text
-vmap <Leader>/ "fy:Ag <C-R>f<CR>
+nmap <Leader>/ :RG<CR>
+nmap <Leader>? :RG <C-R><C-W><CR> 	 " Search for the word under the cursor
+vmap <Leader>/ "fy:RG <C-R>f<CR> 	 " Search for the highlighted text (yank it in register f and then paste from register f)
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 " Typing is hard
 command! Q q
