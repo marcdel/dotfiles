@@ -28,6 +28,7 @@ nmap <leader>sv :source ~/.vimrc<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 nmap <leader>p "0p
+nmap <leader>e :Explore<CR>
 
 " Puts a .vim-session file in your current working directory
 " This file should be in my ~/.gitignore to ignore it globally
