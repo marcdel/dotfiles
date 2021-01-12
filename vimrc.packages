@@ -16,6 +16,7 @@ Plug 'tpope/vim-dispatch' 						" Properly populate the quickfix window for make
 Plug 'tpope/vim-projectionist' 						" Jump to associated files like tests/views/etc similar to Rails.vim
 Plug 'c-brenn/fuzzy-projectionist.vim'
 Plug 'andyl/vim-projectionist-elixir'
+Plug 'tpope/vim-fugitive' 						" Git integration for vim
 
 call plug#end()
 
