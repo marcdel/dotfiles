@@ -60,8 +60,12 @@ nmap <leader>b :Buffers<CR>
 nmap <leader>k :BTags<CR>
 nmap <leader>g :GFiles?<CR>
 nmap <Leader>/ :RG<CR>
-nmap <Leader>? :RG <C-R><C-W><CR> 	 " Search for the word under the cursor
-vmap <Leader>/ "fy:RG <C-R>f<CR> 	 " Search for the highlighted text (yank it in register f and then paste from register f)
+
+" Search for the word under the cursor
+nmap <Leader>? :RG <C-R><C-W><CR>
+
+" Search for the highlighted text (yank it in register f and then paste from register f)
+vmap <Leader>/ "fy:RG <C-R>f<CR>
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
