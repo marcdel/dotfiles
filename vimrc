@@ -10,6 +10,7 @@ set nofoldenable
 set splitright 				" Open new splits to the right
 set splitbelow 				" and below
 set hidden 				" Allow modified buffers to be hidden (argdo is v useless otherwise)
+set switchbuf=usetab 	 		" Try to jump to an existing split/tab if the buffer is already open
 
 " Theme
 set background=dark
@@ -50,6 +51,9 @@ nmap <leader>tv :TestVisit<CR>
 nmap <leader>tt :A<CR>
 
 " fzf config
+let g:fzf_buffers_jump = 1
+let g:fzf_tags_command = 'ctags -R'
+
 nmap <leader>o :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>k :BTags<CR>
@@ -108,7 +112,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd :call CocAction('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
