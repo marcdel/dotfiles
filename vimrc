@@ -74,6 +74,12 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
+" Change vim grep to use ripgrep as well
+" This is useful for e.g. doing global find and replace
+" :grep "foo"
+" :cfdo %s/foo/bar/g | update
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
 " Typing is hard
 command! Q q
 command! Qall qall
