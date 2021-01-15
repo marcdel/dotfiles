@@ -6,6 +6,8 @@ call plug#begin()
 Plug 'elixir-editors/vim-elixir'					" Syntax highlighting, etc for Elixir
 Plug 'neoclide/coc.nvim', {'branch': 'release'}				" Language server based autocomplete
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'mhinz/vim-mix-format' 						" Format Elixir files
+Plug '907th/vim-auto-save' 						" Auto-save files
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 						" Fuzzy file search
 Plug 'tpope/vim-commentary'         					" Comment based on text objects

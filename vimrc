@@ -19,9 +19,6 @@ set background=dark
 " vim-gitgutter
 highlight! link SignColumn LineNr
 
-" Save everytime text is changed
-autocmd TextChanged,TextChangedI,InsertLeave <buffer> update
-
 " Keybindings
 nmap <leader>ev :tabe ~/.vimrc<CR>
 nmap <leader>sv :source ~/.vimrc<CR>
@@ -94,6 +91,13 @@ imap kj <esc>
 if filereadable(expand("~/.vimrc.packages"))
   source ~/.vimrc.packages
 endif
+
+" vim-mix-format
+let g:mix_format_on_save = 1
+
+" vim-auto-save
+let g:auto_save = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Coc.vim
 
