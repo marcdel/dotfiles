@@ -19,7 +19,8 @@ Plug 'tpope/vim-projectionist' 						" Jump to associated files like tests/views
 Plug 'c-brenn/fuzzy-projectionist.vim'
 Plug 'andyl/vim-projectionist-elixir'
 Plug 'tpope/vim-fugitive' 						" Git integration for vim
+Plug 'stsewd/fzf-checkout.vim' 						" Choose git branches from fzf dialogue
+Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
-
-colorscheme solarized

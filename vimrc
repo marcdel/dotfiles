@@ -1,3 +1,7 @@
+if filereadable(expand("~/.vimrc.packages"))
+  source ~/.vimrc.packages
+endif
+
 let mapleader = " "
 
 set title               		" Set iTerm window title to current filename
@@ -13,11 +17,8 @@ set hidden 				" Allow modified buffers to be hidden (argdo is v useless otherwi
 set switchbuf=usetab 	 		" Try to jump to an existing split/tab if the buffer is already open
 
 " Theme
+colorscheme gruvbox
 set background=dark
-" colorscheme is set in vimrc.packages
-
-" vim-gitgutter
-highlight! link SignColumn LineNr
 
 " Keybindings
 nmap <leader>ev :tabe ~/.vimrc<CR>
@@ -32,9 +33,14 @@ nmap <leader>e :Explore<CR>
 nmap <leader>ms :mksession! <C-R>=getcwd()<CR>/.vim_session<CR>
 nmap <leader>ss :source <C-R>=getcwd()<CR>/.vim_session<CR>
 
-" Elixir specific bindings
-autocmd Filetype elixir nmap <leader>f :Dispatch! mix format<CR>
-autocmd Filetype elixir nmap <leader>r :Dispatch! mix test<CR>
+" airline-vim
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = '|'
+
+" fzf-checkout
+nmap <leader>gb ::GBranches<CR>
 
 " vim-test config
 let test#strategy = "dispatch"
@@ -48,6 +54,9 @@ nmap <leader>tv :TestVisit<CR>
 " vim-projectionist
 nmap <leader>tt :A<CR>
 
+" fugitive-vim
+nmap <leader>gs :Gstatus<CR>
+
 " fzf config
 let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R'
@@ -55,7 +64,7 @@ let g:fzf_tags_command = 'ctags -R'
 nmap <leader>o :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>k :BTags<CR>
-nmap <leader>g :GFiles?<CR>
+nmap <leader>gf :GFiles?<CR>
 nmap <Leader>/ :RG<CR>
 
 " Search for the word under the cursor
@@ -93,10 +102,6 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 " Spam jk to get into normal mode
 imap jk <esc>
 imap kj <esc>
-
-if filereadable(expand("~/.vimrc.packages"))
-  source ~/.vimrc.packages
-endif
 
 " vim-mix-format
 let g:mix_format_on_save = 1
