@@ -16,6 +16,10 @@ set splitbelow 				" and below
 set hidden 				" Allow modified buffers to be hidden (argdo is v useless otherwise)
 set switchbuf=usetab 	 		" Try to jump to an existing split/tab if the buffer is already open
 
+" Set horizontal line at cursor position in insert mode
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
+
 " Theme
 colorscheme gruvbox
 set background=dark
