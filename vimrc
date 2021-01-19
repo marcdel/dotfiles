@@ -15,6 +15,7 @@ set splitright 				" Open new splits to the right
 set splitbelow 				" and below
 set hidden 				" Allow modified buffers to be hidden (argdo is v useless otherwise)
 set switchbuf=usetab 	 		" Try to jump to an existing split/tab if the buffer is already open
+set smartcase 				" Case insensitive unless your search term contains caps
 
 " Set horizontal line at cursor position in insert mode
 autocmd InsertEnter * set cul
