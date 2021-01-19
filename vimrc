@@ -48,7 +48,7 @@ let g:airline#extensions#tabline#left_sep = '|'
 nmap <leader>gb ::GBranches<CR>
 
 " vim-test config
-let test#strategy = "dispatch"
+let test#strategy = 'dispatch'
 let g:dispatch_quickfix_height=15
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
@@ -110,6 +110,7 @@ imap kj <esc>
 
 " vim-mix-format
 let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
 
 " vim-auto-save
 let g:auto_save = 1
