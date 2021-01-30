@@ -22,7 +22,8 @@ Plug 'SirVer/ultisnips' 						" Snippets engine
 Plug 'honza/vim-snippets' 						" Snippet templates for ultisnips
 Plug 'tpope/vim-fugitive' 						" Git integration for vim
 Plug 'stsewd/fzf-checkout.vim' 						" Choose git branches from fzf dialogue
-Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline' 						" Fancy status line
+Plug 'morhetz/gruvbox' 							" Retro vim theme
+Plug 'rizzatti/dash.vim'	 					" Keybindings to open the Dash mac app
 
 call plug#end()
